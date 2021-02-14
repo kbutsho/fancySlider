@@ -79,7 +79,7 @@ const createSlider = () => {
   getDuration = 0;
   var duration = parseInt(getDuration);
   console.log
-  if (duration <= 0) { // just ignore negative and 0 value. though it's too fast if anyone put 1 ms 
+  if (duration < 0) { // just ignore negative and 0 value. though it's too fast if anyone put 1 ms 
     alert("Slider duration should not be negative or 0! \n Default duration is 1000 ms!")
     duration = document.getElementById('duration').value = 1000;
   }
