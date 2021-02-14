@@ -71,21 +71,21 @@ const createSlider = () => {
   <span class="prev" onclick="changeItem(-1)"><i class="fas fa-chevron-left"></i></span>
   <span class="next" onclick="changeItem(1)"><i class="fas fa-chevron-right"></i></span>
   `;
-
   sliderContainer.appendChild(prevNext)
   document.querySelector('.main').style.display = 'block';
   // hide image aria
   imagesArea.style.display = 'none';
   var getDuration = document.getElementById('duration').value;
+  getDuration = 0;
   var duration = parseInt(getDuration);
+  console.log
   if (duration <= 0) { // just ignore negative and 0 value. though it's too fast if anyone put 1 ms 
-    alert("Duration Should not be Negative or 0! \n Default Duration is 1000 ms!")
+    alert("Slider duration should not be negative or 0! \n Default duration is 1000 ms!")
     duration = document.getElementById('duration').value = 1000;
   }
   else {
     duration = document.getElementById('duration').value;
   }
-
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
@@ -153,4 +153,4 @@ document.getElementById("search").addEventListener("keypress", function (event) 
     document.getElementById("search-btn").click();
   }
 })
-// document.get
+
